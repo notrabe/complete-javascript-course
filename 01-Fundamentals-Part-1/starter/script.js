@@ -32,11 +32,35 @@ const johnHeight2 = 1.76
 const markWeight2 = 95
 const johnWeight2 = 85
 
+
 function bmi (height, weight){
     return weight/(height * height)
 }
 
-console.log(`This is Mark's BMI for data set one: ${Math.floor(bmi(markHeight1, markWeight1))}`)
-console.log(`This is John's BMI for data set one: ${Math.floor(bmi(johnHeight1, johnWeight1))}`)
-console.log(`This is Mark's BMI for data set two: ${Math.floor(bmi(markHeight2, markWeight2))}`)
-console.log(`This is John's BMI for data set two: ${Math.floor(bmi(johnHeight2, johnWeight2))}`)
+const markHigherBMI1 = bmi(markHeight1, markWeight1) > bmi(johnHeight1, johnWeight1)
+const markHigherBMI2 = bmi(markHeight2, markWeight2) > bmi(johnHeight2, johnWeight2)
+
+console.log(`Mark's BMI is higher than John's for data set one: ${markHigherBMI1}`)
+console.log(`Mark's BMI is higher than John's for data set two: ${markHigherBMI2}`)
+
+/* Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement �
+GOOD LUCK � */
+
+if (markHigherBMI1 === true){
+    console.log(`Mark's BMI (${bmi(markHeight1, markWeight1)}) is higher than John's (${bmi(johnHeight1, johnWeight1)}) for data set one.`)
+} else {
+    console.log(`John's BMI (${bmi(johnHeight1, johnWeight1)}) is higher than Mark's (${bmi(markHeight1, markWeight1)}) for data set one.`)
+}
+
+if (markHigherBMI2 === true){
+    console.log(`Mark's BMI (${bmi(markHeight2, markWeight2)}) is higher than John's (${bmi(johnHeight2, johnWeight2)}) for data set two.`)
+} else {
+    console.log(`John's BMI (${bmi(johnHeight2, johnWeight2)}) is higher than Mark's (${bmi(markHeight2, markWeight2)}) for data set two.`)
+}
