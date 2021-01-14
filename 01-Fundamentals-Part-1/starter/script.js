@@ -22,14 +22,21 @@
 // m tall.
 // GOOD LUCK �
 
-const markHeight = 1.69
-const johnHeight = 1.95
-const markWeight = 78
-const johnWeight = 92
+const markHeight1 = 1.69
+const johnHeight1 = 1.95
+const markWeight1 = 78
+const johnWeight1 = 92
+
+const markHeight2 = 1.88
+const johnHeight2 = 1.76
+const markWeight2 = 95
+const johnWeight2 = 85
 
 function bmi (height, weight){
     return weight/(height * height)
 }
 
-console.log(Math.floor(bmi(markHeight, markWeight)))
-console.log(Math.floor(bmi(johnHeight, johnWeight)))
+console.log(`This is Mark's BMI for data set one: ${Math.floor(bmi(markHeight1, markWeight1))}`)
+console.log(`This is John's BMI for data set one: ${Math.floor(bmi(johnHeight1, johnWeight1))}`)
+console.log(`This is Mark's BMI for data set two: ${Math.floor(bmi(markHeight2, markWeight2))}`)
+console.log(`This is John's BMI for data set two: ${Math.floor(bmi(johnHeight2, johnWeight2))}`)
